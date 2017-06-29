@@ -75,7 +75,7 @@ if graphite_protocol not in ['pickle', 'plaintext']:
 
 
 # Query the cluster root once, to get the cluster name
-clusterRoot = requests.get("{0}://{1}:{2}/".format(elasticsearch_protocol, elasticsearchAddr, elasticsearch_port),
+clusterRoot = requests.get("{0}://{1}/".format(elasticsearch_protocol, elasticsearchAddr, elasticsearch_port),
                            auth=(elasticsearch_user_name, elasticsearch_password)).json()
 clusterName = clusterRoot["cluster_name"]
 
