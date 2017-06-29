@@ -146,7 +146,7 @@ while True:
     to_graphite = []
 
     # Getting nodes JVM usage
-    nodesJson = requests.get("{0}://{1}:{2}/_nodes/stats".format(elasticsearch_protocol, elasticsearchAddr, elasticsearch_port),
+    nodesJson = requests.get("{0}://{1}/_nodes/stats".format(elasticsearch_protocol, elasticsearchAddr, elasticsearch_port),
                              auth=(elasticsearch_user_name, elasticsearch_password)).json()
 
     # Iterate over the nodes
