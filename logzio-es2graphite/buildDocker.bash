@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TAG=logzio/es2graphite
+TAG=unlikely0/es2graphite
 
 docker build -t $TAG ./
 
